@@ -17,4 +17,10 @@ const myFunc = function(){
     console.log("hello World");
 }
 
-// myFunc();
+myFunc();
+
+// stack -> primitive && heap -> non-primitive
+let obj2=myObj;
+obj2.age=20;
+console.log(myObj.age);
+console.log(obj2);
