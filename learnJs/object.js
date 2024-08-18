@@ -37,27 +37,50 @@
 // user.greeting2();
 
 // const tuser=new Object(); // singleton declaration
-const tuser={}
+// const tuser={}
 
-tuser.id="123abc";
-tuser.name="Ayu";
-tuser.isLoggedIn=false;
-console.log(tuser);
-// we can also create nested objects
+// tuser.id="123abc";
+// tuser.name="Ayu";
+// tuser.isLoggedIn=false;
+// console.log(tuser);
+// // we can also create nested objects
 
-const o1={1:"a",2:"b"};
-const o2={3:"c",4:"d"};
+// const o1={1:"a",2:"b"};
+// const o2={3:"c",4:"d"};
 
-const o3={o1,o2}; // o3 will contain 2 obj o1 and o2
-console.log(o3);
-const o4={...o1,...o2}; // spread operator
-console.log(o4); 
-const o5=Object.assign(o1,o2); // assign(target,source) source gets copied in target
-console.log(o5);
+// const o3={o1,o2}; // o3 will contain 2 obj o1 and o2
+// console.log(o3);
+// const o4={...o1,...o2}; // spread operator
+// console.log(o4); 
+// const o5=Object.assign(o1,o2); // assign(target,source) source gets copied in target
+// console.log(o5);
 
-// to get keys of an object
-console.log(Object.keys(tuser)); // returns array of keys
-console.log(Object.values(tuser));
-console.log(Object.entries(tuser)); // returns array of [keys,values] which is an array 
-// check if it has properties
-console.log(tuser.hasOwnProperty("isLoggedIn"));
+// // to get keys of an object
+// console.log(Object.keys(tuser)); // returns array of keys
+// console.log(Object.values(tuser));
+// console.log(Object.entries(tuser)); // returns array of [keys,values] which is an array 
+// // check if it has properties
+// console.log(tuser.hasOwnProperty("isLoggedIn"));
+
+const course={
+    courseName:"learn JS",
+    price:"999",
+    courseInstructor:"Ayush"
+}
+console.log(course.courseInstructor);
+
+// Destructure object
+
+//const {what to extract}=extract form where
+// const {courseInstructor}=course;
+
+//const {what to extract: extract by using word}=extract form where
+const {courseInstructor:instructor}=course;
+console.log(instructor);
+
+// json similar to object but without name
+
+// {
+//     "name":"Ayu",
+//     "age"":19
+// }
