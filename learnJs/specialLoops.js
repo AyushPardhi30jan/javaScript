@@ -117,3 +117,34 @@ const newArr4=arr.map((n)=>n*10)
                     .map((n)=>n+1)
                     .filter((n)=>n>30); // whatever valued return by map/filer above it is passed in it
 console.log(newArr4);
+
+const sum1=arr.reduce(function(acc,cur){ // call back function with acc and cur val
+    return acc+cur;                 // acc is function's previously returned val
+},0); // passing initital val of acc
+console.log(sum1);
+const sum2=arr.reduce((acc, cur)=> acc+cur, 0);
+console.log(sum2);
+
+const course = [
+    {
+        item: "js",
+        price: 200
+    },
+    {
+        item: "cpp",
+        price: 300
+    },
+    {
+        item: "java",
+        price: 400
+    },
+    {
+        item: "python",
+        price: 500
+    },
+]
+
+// add prices of courses
+
+const p=course.reduce((acc,cur)=> acc+cur.price ,0);
+console.log(p);
